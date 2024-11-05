@@ -1,12 +1,11 @@
-import Footer from "@/components/footer";
+import Banner from "@/components/banner";
 import styles from "./page.module.css";
-import Header from "@/components/header";
+import bannerMain from "@/../public/banner-main.png";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-        <Header></Header>
-        <Footer></Footer>
+        <Banner imageSrc={bannerMain} imageAlt="Banner Principal" />
     </div>
   );
 }
