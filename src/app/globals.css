@@ -1,5 +1,7 @@
 :root {
   --bg-base: #0A0D14;
+
+  --header-height: 85.16px;
 }
 
 * {

@@ -1,7 +1,7 @@
+import SignUpForm from '@/modules/auth/components/sign-up-form';
 import styles from './page.module.css';
-import SignInForm from '@/modules/auth/components/sign-in-form';
 
-export default function Login() {
+export default function Registrar() {
     return (
       	<div className={styles.login}>
 			<svg className={styles.banner} xmlns="http://www.w3.org/2000/svg" width="1366" height="227" viewBox="0 0 1366 227" fill="none">
@@ -56,7 +56,7 @@ export default function Login() {
 					</clipPath>
 				</defs>
 			</svg>
-			<SignInForm />
+			<SignUpForm />
 		</div>
     );
 }
