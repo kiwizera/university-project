@@ -1,0 +1,15 @@
+.login {
+    background-color: #E1E6EF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.banner {
+    position: absolute;
+    top: var(--header-height);
+    width: 100%;
+    height: auto;
+}
