@@ -1,8 +1,8 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import styles from './banner.module.css';
 
-export default function Banner({ imageSrc, imageAlt }) {
+export default function Banner({ imageSrc }) {
   return (
-    <Image className={styles.banner} src={imageSrc} alt={imageAlt} />
+    <div className={styles.banner} style={{backgroundImage: `url(${imageSrc.src})`}}></div>
   );
 }
