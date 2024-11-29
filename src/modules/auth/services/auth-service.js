@@ -26,10 +26,9 @@ async function createSessionToken(payload) {
 
 async function isSessionValid() {
     try {
-        const sessionCookie = cookies().get('session');
+        const sessionCookie =  (await cookies()).get('session');
 
         if (!sessionCookie) {
-            console.warn('Session cookie not found');
             return false;
         }
 
@@ -52,7 +51,6 @@ async function isSessionValid() {
         }
 
         const isValid = expirationTime > currentDate;
-        console.log('Session validity:', isValid);
         return isValid;
     } catch (error) {
         console.error('Error in session validation:', error);

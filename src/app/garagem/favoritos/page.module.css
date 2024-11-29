@@ -1,0 +1,15 @@
+.page {
+    display: flex;   
+}
+
+.content {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.content h1 {
+    color: rgb(77, 76, 89);
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
