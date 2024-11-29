@@ -1,5 +1,6 @@
 export default async function getUser(id) {
-    const res = await fetch(`${env('SITE_URL')}/api/users/${id}`);
+    const site_url = process.env.SITE_URL;
+    const res = await fetch(`${site_url}/api/users/${id}`);
     const user = await res.json();
 
     return user
