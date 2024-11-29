@@ -12,6 +12,7 @@ export default async function Modelo({ params }) {
     const model = resModel.model;
 
     const resModelImage = await getModelImages(id);
+    // console.log(resModelImage)
 
     function numberWithPoint(x) {
         x = x.toString();
