@@ -19,12 +19,12 @@ export default function Sidebar({ data, active }) {
                 </svg>
                 Favoritos
             </Link>
-            <Link href='/api/logout' className={styles.item}>
+            <a href={`${process.env.SITE_URL}/api/logout`} className={styles.item}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none">
                     <path fill="#2E2D37" d="M20.253 12.38c.05-.12.08-.25.08-.38a1 1 0 0 0-.3-.7l-2.72-2.72a.996.996 0 1 0-1.41 1.41l1.02 1.01h-4.59c-.55 0-1 .45-1 1s.45 1 1 1h4.59l-1.02 1.02a.996.996 0 0 0 .71 1.7c.26 0 .51-.1.71-.29l2.72-2.72q.135-.135.21-.33"></path><path fill="#2E2D37" d="M18.333 16c-.55 0-1 .45-1 1v2c0 .55-.45 1-1 1h-9c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v1.99c0 .56.45 1.01 1.01 1.01.55 0 .99-.44.99-.99V5c0-1.66-1.34-3-3-3h-9c-1.66 0-3 1.34-3 3v14c0 1.66 1.34 3 3 3h9c1.66 0 3-1.34 3-3v-2c0-.55-.45-1-1-1"></path>
                 </svg>
                 Sair
-            </Link>
+            </a>
         </div>
     );
 }

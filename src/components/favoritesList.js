@@ -1,5 +1,4 @@
 "use client";
-import getUserFavorites from "@/app/lib/getUserFavorites";
 import getModel from "@/app/lib/getModels";
 import { useEffect, useState } from "react";
 
