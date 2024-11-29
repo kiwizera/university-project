@@ -1,7 +1,7 @@
 .header {
     background-color: var(--bg-base);
     color: #FFF;
-    padding: 15px 0px;
+    padding: 10px 0px;
 }
 
 .brand_nav {
@@ -11,6 +11,19 @@
 }
 
 .brand img {
-    width: 50px;
+    width: 30px;
     height: auto;
+}
+
+.account {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.favorite,
+.favorite svg {
+    width: 25px;
+    height: 25px;
 }

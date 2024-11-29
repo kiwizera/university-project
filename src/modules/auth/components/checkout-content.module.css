@@ -1,0 +1,83 @@
+.content {
+    background-color: #FFF;
+    padding: 40px 0;
+}
+
+.checkout {
+    display: flex;
+    gap: 40px;
+}
+
+.form {
+    width: 60%;
+}
+
+.form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #CCC;
+    outline: none;
+}
+
+.form input[type="submit"] {
+    cursor: pointer;
+    background-color: rgb(225, 17, 56);
+    color: #FFF;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.checkout_content {
+    background-color: #ebebeb;
+    border-radius: 8px;
+    width: 40%;
+    padding: 20px 40px;
+    height: fit-content;
+}
+
+.checkout_content h2 {
+    font-weight: 500;
+}
+
+.checkout_content p {
+    font-size: 16px;
+    color: #6b6b6b;
+}
+
+.checkout_content hr {
+    margin: 10px 0;
+}
+
+.checkout_content div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .04px;
+    color: #2e2d37;
+    display: block;
+}
+
+.hidden_input {
+    display: none!important;
+}

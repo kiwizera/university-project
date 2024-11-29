@@ -17,7 +17,7 @@ export async function middleware(req) {
 
     console.log('Processing request for:', pathname);
 
-    if (publicRoutes.includes(pathname)) {
+    if (publicRoutes.includes(pathname) || pathname.startsWith('/modelos/') || pathname.startsWith('/api/')) {
         console.log('Public route detected:', pathname);
         return NextResponse.next();
     }

@@ -1,0 +1,61 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 24px 32px;
+    border-radius: 8px;
+    background: white;
+    max-width: 1008px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.categories {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 30px;
+}
+
+.categories h2 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: rgb(174, 174, 186);
+    transition: .2s ease;
+}
+
+.categories h2:hover {
+    color: rgb(46, 45, 55);
+    transition: .2s ease;
+}
+
+.categories h2.active {
+    color: rgb(46, 45, 55);
+    border-bottom: 3px solid rgb(225, 17, 56);
+}
+
+.status {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgb(237, 236, 242);
+    width: fit-content;
+}
+
+.status button {
+    background-color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.status button.active {
+    background-color: rgb(225, 17, 56);
+    color: #FFF;
+}

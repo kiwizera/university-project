@@ -55,12 +55,74 @@ async function login(formData) {
         email: user.usuario_email
     });
 
-    redirect('/portal');
+    redirect('/garagem');
+}
+
+async function createShippingAndOrder(formData) {
+    'use server';
+
+    const usuario_id = formData.get('usuario_id');
+    const produto_id = formData.get('produto_id');
+    const pedido_preco = formData.get('pedido_preco');
+    const endereco_nome = formData.get('nome');
+    const endereco_logradouro = formData.get('logradouro');
+    const endereco_numero = formData.get('numero');
+    const endereco_complemento = formData.get('complemento');
+    const endereco_cep = formData.get('cep');
+    const endereco_cidade = formData.get('cidade');
+    const endereco_estado = formData.get('estado');
+
+    await prisma.endereco.create({
+        data: {
+            usuario_id,
+            endereco_nome,
+            endereco_logradouro,
+            endereco_numero,
+            endereco_complemento,
+            endereco_cep,
+            endereco_cidade,
+            endereco_estado,
+        }
+    });
+
+    const endereco = await prisma.endereco.findFirst({
+        where: {
+            usuario_id,
+            endereco_nome,
+            endereco_logradouro,
+            endereco_numero,
+            endereco_complemento,
+            endereco_cep,
+            endereco_cidade,
+            endereco_estado,
+        }
+    });
+
+    await prisma.pedido.create({
+        data: {
+            usuario_id,
+            endereco_id: endereco.endereco_id,
+            produto_id,
+            pedido_preco: parseFloat(pedido_preco)
+        }
+    });
+
+    await prisma.produto.update({
+        where: {
+            produto_id
+        },
+        data: {
+            produto_ativo: false
+        }
+    })
+
+    redirect('/garagem');
 }
 
 const AuthActions = {
     createAccount,
-    login
+    login,
+    createShippingAndOrder
 }
 
 export default AuthActions;

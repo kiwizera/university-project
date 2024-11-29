@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <div className='container'>
             <p>Copyright © 2024 Bravo Automóveis.</p>
-            <p>All rights reserved.</p>
+            <p>Todos direitos reservados.</p>
         </div>
     </div>
   );

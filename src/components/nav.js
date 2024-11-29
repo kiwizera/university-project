@@ -8,8 +8,6 @@ export default function Nav() {
             <li>
               <Link href="/modelos" className={styles.link}>Modelos</Link>
             </li>
-            <li>Serviços</li>
-            <li>Contato</li>
         </ul>
     </nav>
   );
