@@ -1,5 +1,6 @@
 export default async function getUserFavorites(id) {
-    const res = await fetch(`${env('SITE_URL')}/api/favorites/${id}`);
+    const site_url = process.env.SITE_URL;
+    const res = await fetch(`${site_url}/api/favorites/${id}`);
     const favorites = await res.json();
 
     return favorites
